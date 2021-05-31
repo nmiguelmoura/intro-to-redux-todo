@@ -1,0 +1,36 @@
+#app {
+  margin: 20px;
+}
+
+.display-count {
+  width: 100%;
+  font-size: 100px;
+  color: orange;
+  text-align: center;
+}
+
+.buttons button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:25%;
+  font-size: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.buttons button:nth-child(1) {
+  background-color: red;
+}
+
+.buttons button:nth-child(2) {
+  background-color: green;
+}
+
+.buttons button:nth-child(3) {
+  background-color: blue;
+}
