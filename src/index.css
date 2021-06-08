@@ -50,7 +50,7 @@
   width: 100%;
 }
 
-.todo label[data-isComplete="true"] {
+.todo label[data-iscomplete="true"] {
   color: #888;
   text-decoration: line-through;
 }

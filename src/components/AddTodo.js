@@ -1,11 +1,14 @@
 import React from "react";
+import {useDispatch} from "react-redux";
+import * as actions from "../store/actions";
 
 const AddTodo = ({createTodo}) => {
+  const dispatch = useDispatch();
   const [todo, setTodo] = React.useState("");
 
   const onSubmit = (event) => {
     event.preventDefault();
-    createTodo(todo);
+    dispatch(actions.AddTodo(todo));
     setTodo("");
   }
 

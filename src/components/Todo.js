@@ -13,7 +13,7 @@ const Todo = ({
         checked={isComplete}
         onChange={() => toggleTodoCompleteStatus(id)}
       />
-      <label htmlFor={id} data-isComplete={isComplete}>{text}</label>
+      <label htmlFor={id} data-iscomplete={isComplete}>{text}</label>
 
       <button onClick={() => deleteTodo(id)}>Delete</button>
     </div>

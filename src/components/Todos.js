@@ -1,45 +1,23 @@
 import React from "react";
 import Todo from "./Todo";
-import AddTodo from "./AddTodo";
+import { useSelector, useDispatch } from "react-redux";
+import * as actions from "../store/actions";
 
 const Todos = () => {
-  const [todos, setTodos] = React.useState([]);
-
-  const createTodo = (todo) => {
-    const newTodos = [
-      ...todos,
-      {
-        id: todo.toLowerCase().replace(" ", ""),
-        text: todo,
-        isComplete: false
-      }
-    ];
-    setTodos(newTodos);
-  };
+  const todos = useSelector((state) => state);
+  const dispatch = useDispatch();
 
   const toggleTodoCompleteStatus = (id) => {
-    const newTodos = todos.map((todo) => {
-      if (todo.id !== id) {
-        return todo;
-      }
-
-      return {
-        ...todo,
-        isComplete: !todo.isComplete
-      };
-    });
-    setTodos(newTodos);
+    dispatch(actions.toggleTodo(id));
   };
 
   const deleteTodo = (id) => {
-    const newTodos = todos.filter((todo) => todo.id !== id);
-    setTodos(newTodos);
+    dispatch(actions.deleteTodo(id));
   };
 
   return (
     <div>
-      <AddTodo createTodo={createTodo} />
-      <div classname="todos">
+      <div className="todos">
         {todos.map(({ id, text, isComplete }) => (
           <Todo
             key={id}
