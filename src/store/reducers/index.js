@@ -6,11 +6,7 @@ export const todos = (state = [], action) => {
     case ADD_TODO:
       return [
         ...state,
-        {
-          id: uuidv4(),
-          text: action.todo,
-          isComplete: false
-        }
+        action.todo
       ];
 
     case DELETE_TODO:
