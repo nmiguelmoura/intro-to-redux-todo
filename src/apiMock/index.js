@@ -24,6 +24,15 @@ export const save = (text = "") =>
     }, INTERVAL);
   });
 
+  export const remove = (id) => new Promise((res, rej) => {
+    setTimeout(() => {
+      todos = todos.filter(todo => todo.id !== id);
+      res({
+        statusCode: 200,
+      })
+    }, INTERVAL);
+  });
+
   export const get = () => new Promise((res, rej) => {
     setTimeout(() => {
       res({
@@ -31,4 +40,4 @@ export const save = (text = "") =>
         data: todos
       })
     }, INTERVAL);
-  })
+  });
