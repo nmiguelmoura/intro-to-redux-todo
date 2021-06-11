@@ -1,5 +1,4 @@
 import { ADD_TODO, DELETE_TODO, TOGGLE_TODO_STATUS } from "../actions/constants";
-const { v4: uuidv4 } = require("uuid");
 
 export const todos = (state = [], action) => {
   switch (action.type) {
