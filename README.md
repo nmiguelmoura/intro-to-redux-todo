@@ -85,3 +85,13 @@ In this case, we want to use the logger, so:
 5. This new middleware should check if action is a function.
 
 6. If its a function, it should return that function execution.
+
+## Challenges
+
+1. Implement the delete the same way.
+
+2. Implement the status toggle the same way.
+
+3. Implement getting all todos from DB when the app initializes.
+
+4. Implement a UI optimistic approach on changing the status of a TODO.
