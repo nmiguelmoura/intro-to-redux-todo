@@ -2,7 +2,18 @@ const { v4: uuidv4 } = require("uuid");
 
 const INTERVAL = 1000;
 
-let todos = [];
+let todos = [
+  {
+    id: '07ca0d3f-1977-4aeb-9258-fade51a38b5c',
+    text: 'ir as compras',
+    isComplete: false
+  },
+  {
+    id: '07ca3f-1977-4aeb-9258-fade51a38b5c',
+    text: 'fazer TPC',
+    isComplete: true
+  }
+];
 
 export const save = (text = "") =>
   new Promise((res, rej) => {
