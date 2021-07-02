@@ -1,10 +1,10 @@
 import React from "react";
 import Todo from "./Todo";
 import { useSelector, useDispatch } from "react-redux";
-import * as actions from "../store/actions";
+import * as actions from "../store/actions/todos";
 
 const Todos = () => {
-  const todos = useSelector((state) => state);
+  const todos = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
   React.useEffect(() => {

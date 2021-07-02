@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const todos = useSelector((state) => state);
+  const todos = useSelector((state) => state.todos);
   const incompleteTodos = todos.filter((todo) => !todo.isComplete);
   return (
     <header>

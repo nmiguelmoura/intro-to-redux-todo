@@ -1,3 +1,5 @@
+import { handleDeleteTodo } from "../actions/todos";
+
 const thunk = (store) => (next) => (action) => {
   if(typeof action === "function") {
     return action(store.dispatch);

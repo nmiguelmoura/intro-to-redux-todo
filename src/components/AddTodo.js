@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import * as actions from "../store/actions";
+import * as actions from "../store/actions/todos";
 
 const AddTodo = () => {
   const dispatch = useDispatch();
@@ -18,8 +18,9 @@ const AddTodo = () => {
         placeholder="Add your todos here"
         value={todo}
         onChange={(event) => setTodo(event.target.value)}
+        data-testid="add-todo"
       />
-      <button onClick={onSubmit}>Submit</button>
+      <button onClick={onSubmit} data-testid="submit-button">Submit</button>
     </form>
   );
 };
